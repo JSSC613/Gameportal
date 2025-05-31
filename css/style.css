@@ -1,0 +1,285 @@
+/* 全域設定 */
+@font-face {
+  font-family: 'FusionPixel';
+  src: url('../assets/fusion-pixel-10px-monospaced-zh_hant.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cubic-11';
+  src: url('../assets/Cubic_11.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    font-family: 'Cubic-11','FusionPixel','Comic Sans MS', 'ZCOOL KuaiLe', 'Noto Sans TC', cursive, sans-serif;
+  
+
+    background: linear-gradient(135deg, #6a89cc, #8d7ec9); /* 調整為更亮、更活潑的藍紫色漸層 */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333; /* 淺色背景下，文字改為深色以保持對比 */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em; /* 調整字體大小 */
+  letter-spacing: 2px;
+  font-family: 'Cubic-11','FusionPixel','Comic Sans MS', cursive, sans-serif;
+}
+
+
+
+header button {
+  padding: 8px 15px; /* 調整按鈕大小 */
+  background: #5aa3e8ae;
+  color: white;
+  border: none;
+  border-radius: 8px; /* 調整圓角 */
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+header button:hover {
+  background: #4a92d7;
+}
+
+
+/* 遊戲列表區塊 (在 index.html 使用) */
+#game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1000px; /* 限制最大寬度並居中 */
+  margin: 20px auto;
+}
+
+/* 遊戲卡片設計 */
+.game-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* 添加背景色過渡 */
+  cursor: pointer;
+  display: flex; /* 使用 flexbox 居中內容 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px; /* 設置最小高度 */
+}
+
+.game-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background-color: #e0e0e0; /* 懸停時變淺灰色 */
+}
+
+.game-card h3 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #2a7a80;
+  text-align: center; /* 確保文字居中 */
+}
+
+/* 遊戲容器 (在 game.html 使用，用於載入遊戲內容) */
+#game-container {
+  margin-top: 20px;
+  padding: 0 20px; /* 添加左右內邊距 */
+  display: flex; /* 使用 flexbox 居中遊戲內容 */
+  justify-content: center;
+  align-items: flex-start; /* 頂部對齊遊戲內容 */
+}
+
+
+/* 暱稱輸入彈窗 */
+#nickname-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* 調深背景透明度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+  font-family:'Cubic-11', 'FusionPixel','Comic Sans MS', cursive, sans-serif;
+}
+
+.modal-content {
+  background: #ffffff; /* 使用白色背景 */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  color: #333; /* 內容文字顏色 */
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #7561c3cb; /* 使用主題紫色 */
+  font-family: 'Cubic-11','FusionPixel','Comic Sans MS', cursive, sans-serif;
+}
+
+.modal-content input {
+  padding: 12px 15px; /* 調整 padding */
+  width: calc(80% - 30px); /* 計算寬度減去 padding */
+  border: 2px solid #a0522d; /* 使用土色邊框 */
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 15px; /* 添加底部間距 */
+}
+
+.modal-content input:focus {
+  border-color: #ff66aa; /* 聚焦時亮色邊框 */
+  box-shadow: 0 0 5px rgba(255, 102, 170, 0.5);
+}
+
+
+.modal-content button {
+  /* margin-top: 15px; */ /* 已在 input 添加底部間距 */
+  padding: 10px 20px;
+  background: #ff66aa; /* 使用亮色背景 */
+  border: none;
+  color: white; /* 文字白色 */
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-content button:hover {
+  background: #ff3388; /* 懸停時變深 */
+}
+
+/* 動畫 */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* 遊戲中的分數和上傳按鈕容器，放在 game.html 的 game-container 後 */
+#score-area {
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 20px; /* 底部留白 */
+}
+
+#score-area button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ff66aa;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#score-area button:hover {
+  background-color: #ff3388;
+}
+
+
+
+/* 全域設定 */
+
+
+/* 頁首設計 */
+header {
+    /* background: rgba(62, 112, 186, 0.9); 稍微亮一點的頁首背景，與整體主題更協調 */
+    background: linear-gradient(135deg, rgba(101, 153, 232, 0.9), rgba(203, 138, 222, 0.9)); 
+    color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 柔和陰影 */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    font-family: 'Cubic-11','FusionPixel','Comic Sans MS', cursive, sans-serif;
+}
+
+#nickname-display {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #fff675; /* 金色暱稱保持不變 */
+    text-align: center;
+    position: relative;
+}
+
+header button {
+    padding: 8px 15px;
+    background: #e74c3c; /* 紅色按鈕保持不變 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+header button:hover {
+    background: #c0392b; /* 深紅色 hover 保持不變 */
+}
+
+
+#game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* 遊戲卡片設計 */
+.game-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 柔和陰影 */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    border: 1px solid #e0e0e0; /* 輕微邊框 */
+}
+
+.game-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* 更明顯的 hover 陰影 */
+    background-color: #f0f0f0; /* hover 時淺灰色 */
+}
+
+.game-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #4a69bd; /* 藍色標題，與新的背景色系搭配 */
+    text-align: center;
+}

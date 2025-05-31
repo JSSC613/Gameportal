@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "public": "gameportal",
+    "rewrites": [
+      { "source": "/game", "destination": "/game.html" }
+    ]
+  }
+}

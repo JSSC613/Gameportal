@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Gen+Jyuu+Gothic:wght@300;400;700&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>冒險者的小遊戲天堂</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+  <header>
+    <h1>🎮 Small Game World</h1>
+    <div id="nickname-display"></div>
+  </header>
+
+  <section id="game-list">
+    <p>載入遊戲列表中...</p>
+  </section>
+
+  <div id="nickname-modal" style="display:none;">
+    <div class="modal-content">
+      <h3>請輸入你的暱稱</h3>
+      <input type="text" id="nickname-input" placeholder="例如：小明" maxlength="10"/><br />
+      <button id="confirm-nickname">確認</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
+
