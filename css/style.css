@@ -283,3 +283,8 @@ header button:hover {
     color: #4a69bd; /* 藍色標題，與新的背景色系搭配 */
     text-align: center;
 }
+.p{
+  bottom: 10px;
+  position: absolute;
+  font-size: 0.8em;
+}
