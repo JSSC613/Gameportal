@@ -235,7 +235,7 @@ if (!gameContainer) {
     </style>
 
     <div class="match3-game-wrapper">
-        <h2>💎 消消樂遊戲</h2>
+        <h2>💎</h2>
         
         <div class="match3-layout">
             <div class="instructions">
