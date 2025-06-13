@@ -1,6 +1,4 @@
 // games/memory.js
-
-// 嘗試取得遊戲容器元素
 const gameContainer = document.getElementById("game-container");
 
 // 如果找不到遊戲容器，則記錄錯誤並停止後續的遊戲初始化程式碼執行
@@ -239,7 +237,7 @@ if (!gameContainer) {
     }
     </style>
     <div class="memory-container">
-        <h2>🧠</h2>
+        <h2>🧠 記憶翻牌遊戲</h2>
         <div id="move-count" style="font-size: 1.2em; margin-bottom: 15px;">翻牌次數：0</div>
         <div class="game-board" id="game-board"></div>
         <div>
