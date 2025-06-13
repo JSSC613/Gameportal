@@ -260,7 +260,7 @@ if (!gameContainer) {
     </style>
 
     <div class="tetris-game-wrapper">
-        <h2>🧱 俄羅斯方塊</h2>
+        <h2>🧱</h2>
         
         <div class="tetris-layout">
             <div class="game-info">
