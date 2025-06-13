@@ -239,7 +239,7 @@ if (!gameContainer) {
     }
     </style>
     <div class="memory-container">
-        <h2>🧠 記憶翻牌遊戲</h2>
+        <h2>🧠</h2>
         <div id="move-count" style="font-size: 1.2em; margin-bottom: 15px;">翻牌次數：0</div>
         <div class="game-board" id="game-board"></div>
         <div>
