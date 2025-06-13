@@ -195,7 +195,7 @@ if (!gameContainer) {
 
     </style>
 <div class="minesweeper-container">
-        <h2>💣 踩地雷</h2>
+        <h2>💣</h2>
         <div class="controls">
             難度：
             <select id="difficulty-select">
