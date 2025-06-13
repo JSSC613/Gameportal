@@ -69,7 +69,7 @@ const gameList = [
     { id: "minesweeper", name: "💣 <br/> 踩地雷" },
     { id: "memory", name: "🧠 <br/> 記憶翻牌" },
     { id: "match3", name: "💎 <br/> 消消樂" },
-    { id: "block", name: "♦️ <br/> 俄羅斯方塊" },
+    { id: "block", name: "🧱 <br/> 俄羅斯方塊" },
     { id: "none", name: "🕹️ <br/> 敬請期待..." } // Uncommented this line
 ];
 
