@@ -28,7 +28,8 @@ const gameNames = {
   ooxx: "#️⃣ ooxx",
   minesweeper: "💣 踩地雷",
   memory: "🧠 記憶翻牌",
-  match3: "💎 消消樂" // Added Match 3
+  match3: "💎 消消樂" ,// Added Match 3
+  block:"🧱俄羅斯方塊"
   // none:"🕹️敬請期待"
 };
 
